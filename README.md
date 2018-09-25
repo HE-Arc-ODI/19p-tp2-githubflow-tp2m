@@ -159,48 +159,49 @@ The history of a project is made up of ["commits"](http://stackoverflow.com/ques
 
   It is a good practice to link your commit to an existing issue by typing  `Relates #1`. Thanks to using the hash symbol followed by the relevant issue number your commit will be [automatically linked to an existing issue](https://help.github.com/articles/autolinked-references-and-urls/).
 
-  ```sh
-  $ git commit -m 'add git workshop heading & shadow styling
-  > Relates #1'
-  ```
-<img src="images/step6GitFlow.png" width="400" height="auto" alt="repo visual after step 1">
+| Programmer A | Programmer B |
+|--|--|
+|<pre> $ git commit -m 'add homepage (index.html)<br>> Relates #1'</pre> |<pre> $ git commit -m 'add stylesheet (style.css)<br>> Relates #2'</pre>|
+|<img src="images/step6GitFlowA.png" width="400" height="auto" alt="repo visual after step 1">|<img src="images/step6GitFlowB.png" width="400" height="auto" alt="repo visual after step 1">|
 
 <!-- ***********************************************************-->
 ## Step 7 - Push your local version up to GitHub
 
 At this point, your remote repo looks exactly the same as at the beginning. You need to push your changes.
 
-1. [Push](https://help.github.com/articles/pushing-to-a-remote/) the `create-heading-with-shadow` branch up to the "origin" i.e. the GitHub repo that you cloned from.
-
-  ```sh
-  $ git push origin create-heading-with-shadow
-  ```
-
-<img src="images/step7GitFlow.png" width="400" height="auto" alt="repo visual after step 1">
+| Programmer A | Programmer B |
+|--|--|
+|1. [Push](https://help.github.com/articles/pushing-to-a-remote/) the `create-homepage` branch up to the "origin" i.e. the GitHub repo that you cloned from.|1. [Push](https://help.github.com/articles/pushing-to-a-remote/) the `create-stylesheet` branch up to the "origin" i.e. the GitHub repo that you cloned from.|
+|<pre>$ git push origin create-homepage</pre>|<pre>$ git push origin create-stylesheet</pre>|
+|<img src="images/step7GitFlowA.png" width="400" height="auto" alt="repo visual after step 1">|<img src="images/step7GitFlowB.png" width="400" height="auto" alt="repo visual after step 1">|
 
 <!-- ***********************************************************-->
 ## Step 8 - Create a pull request
 
-1. Programmer 1 navigates to the repository on GitHub.com and creates a [pull request](https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request).
+| Programmer A | Programmer B |
+|--|--|
+|1. Navigate to the repository on GitHub.com and creates a [pull request](https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request).|1. Navigate to the repository on GitHub.com and creates a [pull request](https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request).|
+|2. Add a descriptive title (e.g. `Creation of the homepage`) and leave a comment linking the pull request to the issue.|2. Add a descriptive title (e.g. `Creation of the stylesheet`) and leave a comment linking the pull request to the issue.|
+|3. Select Programmer B as an [assignee](https://help.github.com/articles/assigning-issues-and-pull-requests-to-other-github-users/).| 3. Select Programmer A as an [assignee](https://help.github.com/articles/assigning-issues-and-pull-requests-to-other-github-users/)
 
-    + Add a descriptive title (e.g. `Fix the spelling mistake in page heading`) and leave a comment linking the pull request to the issue.
+Example of the pull request page on GitHub :
 
-    + Select Programmer 2 as an [assignee](https://help.github.com/articles/assigning-issues-and-pull-requests-to-other-github-users/).
-
-    <img src="images/pull-request-open.png" width="500" height="auto" alt="open pull request page">
-
-
+<img src="images/pull-request-open.png" width="500" height="auto" alt="open pull request page">
 
 <!-- ***********************************************************-->
-## Step 9 - Programmer 2 merges the pull request :+1:
+## Step 9 - You now have to accept the pull request of the other programmer:+1:
 You should never merge your own pull requests. A PR gives the rest of your team the chance to review before your changes are merged into `master`. In your projects, you will be asking the other pair to do this.
 
-1. Programmer 2 reviews the changes and [merges the pull request](https://help.github.com/articles/merging-a-pull-request/#merging-a-pull-request-on-github) on GitHub.com.
+| Programmer A | Programmer B |
+|--|--|
+|1. You have to review the changes and [merges the pull request](https://help.github.com/articles/merging-a-pull-request/#merging-a-pull-request-on-github) of Programmer B on GitHub.|1. You have to review the changes and [merges the pull request](https://help.github.com/articles/merging-a-pull-request/#merging-a-pull-request-on-github) of Programmer A on GitHub.|
+|<img src="images/pull-request-tab.png" width="500" height="auto" alt="pull request tab button">|<img src="images/pull-request-tab.png" width="500" height="auto" alt="pull request tab button">|
+|Now your remote repo looks like this: <br> <img src="images/step9GitFlowB.png" width="400" height="auto" alt="repo visual after step 1">|Now your remote repo looks like this: <br> <img src="images/step9GitFlowA.png" width="400" height="auto" alt="repo visual after step 1">|
 
-  <img src="images/pull-request-tab.png" width="500" height="auto" alt="pull request tab button">    
+After the two pull requests, the result will be the following:
 
-Now your remote repo looks like this: </br>
-<img src="images/step9GitFlow.png" width="400" height="auto" alt="repo visual after step 1">
+<img src="images/step9GitFlowFinal.png" width="500" height="auto" alt="repo visual after step 1">
+
 
 
 <!-- ***********************************************************-->
@@ -221,18 +222,19 @@ When you apply the two changes above the heading will look like this:
 <img src="images/heading-after.png" width="500" height="auto" alt="git workflow workshop heading with css style">
 
 
-You decide that one of you **(Programmer 1) will resolve issue number 1** while the other person **(Programmer 2) will resolve issue number 2**. When you begin working on your weekly projects, you will always be pairing. So programmer 1 represents "pair 1" and programmer 2 represents "pair 2".
+You decide that one of you **(Programmer A) will resolve issue number 1** while the other person **(Programmer B) will resolve issue number 2**. When you begin working on your weekly projects, you will always be pairing. So programmer A represents "pair 1" and programmer B represents "pair 2".
 
 **Note: Only one line in the `index.html` file needs to be modified.**
 
 
 <!-- ***********************************************************-->
-## Step 1 - Programmer 2 clones the repo
+## Step 1 - The two programmers have to pull the branch Master
 
-1. Make sure both teammates have a cloned, so you each have a local version on your own computer
+1. You both have to pull the branch Master so that you have all the files up-to-date.
 
     ```sh
-    $ git clone 'PASTE THE URL OF YOUR REPOSITORY HERE'
+    $ git checkout master
+    $ git pull origin master
     ```
 
 
@@ -242,53 +244,29 @@ You decide that one of you **(Programmer 1) will resolve issue number 1** while 
 
 1. Create the following two issues and assign each one to a different person
 
-    + `Fix spelling typo in <h1> heading` (Programmer 1)
+    + `Fix spelling typo in <h1> heading` (Programmer A)
 
-    + `Correct the class name of <h1> heading to match the existing class name in the css file` (Programmer 2)
+    + `Correct the class name of <h1> heading to match the existing class name in the css file` (Programmer B)
 
 
 <!-- ***********************************************************-->
 ## Step 3 - Both programmers create one branch each and switch to them
 
-1. Both programmers create one branch each: `fix-typo-heading` (Programmer 1) and `update-class-heading` (Programmer 2).
+| Programmer A | Programmer B |
+|--|--|
+|Create the branch `fix-typo-heading` :<br><pre> $ git branch fix-typo-heading</pre>|Create the branch `update-class-heading` :<br><pre> $ git branch update-class-heading</pre>|
+|Leave the master branch by switching to the new branch :<br><pre>$ git checkout fix-typo-heading</pre>|Leave the master branch by switching to the new branch :<br><pre>$ git checkout update-class-heading</pre>
 
-  ```sh
-  # Programmer 1:
-  $ git branch fix-typo-heading
-
-  # Programmer 2:
-  $ git branch update-class-heading
-  ```
-
-1. Both programmers leave the master branch by switching to the new branches.
-
-  ```sh
-  # Programmer 1:
-  $ git checkout fix-typo-heading
-
-  # Programmer 2:
-  $ git checkout update-class-heading
-  ```
-
-Note: You can achieve both steps _at once_ with `git checkout -b <new-branch-name>`.</br>
+Note: You can achieve both steps _at once_ with `git checkout -b <new-branch-name>`.<br>
+**MODIFY IMAGE**
 <img src="images/2step3GitFlow.png" width="400" height="auto" alt="repo visual after step 1">
 
 <!-- ***********************************************************-->
 ## Step 4 - Both programmers open their `index.html` files and make one requested change each
 
-1. **Programmer 1 fixes only the spelling typo** in the heading (WORKSHOW -> WORKSHOP). Please do not update the class name. This is dealt with by Programmer 2.
-
-  ```html
-  <h1 class="some-heading">GIT WORKFLOW WORKSHOP</h1>
-  ```
-
-1. **Programmer 2 updates only the class name** of the heading (`class="some-heading"` -> `class="page-heading"`). Please do not fix the spelling mistake. This is dealt with by Programmer 1.
-
-  ```html
-  <h1 class="page-heading">GIT WORKFLOW WORKSHOW</h1>
-  ```
-
-
+| Programmer A | Programmer B |
+|--|--|
+|**Fix only the spelling typo** in the heading (WORKSHOW -> WORKSHOP). Please do not update the class name. This is dealt with by Programmer B :<br>```<h1 class="some-heading">GIT WORKFLOW WORKSHOP</h1>```|**update only the class name** of the heading (`class="some-heading"` -> `class="page-heading"`). Please do not fix the spelling mistake. This is dealt with by Programmer A:<br>```<h1 class="page-heading">GIT WORKFLOW WORKSHOW</h1>```|
 
 <!-- ***********************************************************-->
 ## Step 5 - Both programmers save their `index.html` files and check status
@@ -318,16 +296,11 @@ Note: You can achieve both steps _at once_ with `git checkout -b <new-branch-nam
 ## Step 7 - Both programmers commit their changes
 1. Both programmers commit the changes. Don't forget the multi-line commit message with the referenced issue.
 
-  ```sh
-  # Programmer 1:
-  $ git commit -m 'Fix typo in page heading
-  > Relates #<issue number>'
+| Programmer A | Programmer B |
+|--|--|
+|<pre>$ git commit -m 'Fix typo in page heading<br>> Relates #[issue number]'</pre>|<pre>$ git commit -m 'Update class name in heading<br>> Relates #[issue number]'</pre>|
 
-  # Programmer 2:
-  $ git commit -m 'Update class name in heading
-  > Relates #<issue number>'
-  ```
-
+**MODIFY IMAGE**
 <img src="images/2step7GitFlow.png" width="400" height="auto" alt="repo visual after step 1">
 
 <!-- ***********************************************************-->
@@ -340,13 +313,13 @@ We have so many programmers working on this project now, who knows what changes 
   $ git checkout master
   ```
 
-1. Programmer 1 [pulls](https://git-scm.com/docs/git-pull) the `master` branch from the remote (GitHub repo) to make sure that the local version of `master` is up to date with the remote (GitHub) version of `master`. (There should be no changes since neither of you has pushed any changes to the remote yet.) **It is a good practice to regularly check for changes on the remote before pushing your local changes.**
+1. Programmer A [pulls](https://git-scm.com/docs/git-pull) the `master` branch from the remote (GitHub repo) to make sure that the local version of `master` is up to date with the remote (GitHub) version of `master`. (There should be no changes since neither of you has pushed any changes to the remote yet.) **It is a good practice to regularly check for changes on the remote before pushing your local changes.**
 
   ```sh
   $ git pull origin master
   ```
 
-1. Programmer 1 switches back to the `fix-typo-heading` branch.
+1. Programmer A switches back to the `fix-typo-heading` branch.
 
   ```sh
   $ git checkout fix-typo-heading
@@ -355,9 +328,9 @@ We have so many programmers working on this project now, who knows what changes 
 
 
 <!-- ***********************************************************-->
-## Step 9 - Programmer 1 pushes `fix-typo-heading` branch to remote
+## Step 9 - Programmer A pushes `fix-typo-heading` branch to remote
 
-1. Programmer 1 [pushes](https://help.github.com/articles/pushing-to-a-remote/) `fix-typo-heading` branch to remote
+1. Programmer A [pushes](https://help.github.com/articles/pushing-to-a-remote/) `fix-typo-heading` branch to remote
 
   ```sh
   $ git push origin fix-typo-heading
@@ -366,22 +339,22 @@ We have so many programmers working on this project now, who knows what changes 
 <img src="images/2step9GitFlow.png" width="400" height="auto" alt="repo visual after step 1">
 
 <!-- ***********************************************************-->
-## Step 10 - Programmer 1 creates a pull request
+## Step 10 - Programmer A creates a pull request
 
-1. Programmer 1 navigates to the repository on GitHub.com and creates a [pull request](https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request).
+1. Programmer A navigates to the repository on GitHub.com and creates a [pull request](https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request).
 
     + Add a descriptive title (e.g. `Fix the spelling mistake in page heading`) and leave a comment linking the pull request to the issue.
 
-    + Select Programmer 2 as an [assignee](https://help.github.com/articles/assigning-issues-and-pull-requests-to-other-github-users/).
+    + Select Programmer B as an [assignee](https://help.github.com/articles/assigning-issues-and-pull-requests-to-other-github-users/).
 
     <img src="images/pull-request-open.png" width="500" height="auto" alt="open pull request page">
 
 
 
 <!-- ***********************************************************-->
-## Step 11 - Programmer 2 reviews the pull request
+## Step 11 - Programmer B reviews the pull request
 
-Programmer 2 [reviews the pull request](https://help.github.com/articles/about-pull-request-reviews/)
+Programmer B [reviews the pull request](https://help.github.com/articles/about-pull-request-reviews/)
 
 1. Step through each commit (in this case one)
 
@@ -395,27 +368,27 @@ Programmer 2 [reviews the pull request](https://help.github.com/articles/about-p
 
 
 <!-- ***********************************************************-->
-## Step 12 - Programmer 2 merges the pull request :+1:
+## Step 12 - Programmer B merges the pull request :+1:
 
-1. Programmer 2 [merges the pull request](https://help.github.com/articles/merging-a-pull-request/#merging-a-pull-request-on-github) on GitHub.com.
+1. Programmer B [merges the pull request](https://help.github.com/articles/merging-a-pull-request/#merging-a-pull-request-on-github) on GitHub.com.
 
   <img src="images/pull-request-tab.png" width="500" height="auto" alt="pull request tab button">
 
-2. Programmer 2 opens the live website on GitHub pages to double check that the spelling mistake has been corrected. Go to the repository settings on Github and scroll down until you find Github Pages title. Select the master branch as the source and save, and you'll then see the URL where the live website is. 
+2. Programmer B opens the live website on GitHub pages to double check that the spelling mistake has been corrected. Go to the repository settings on Github and scroll down until you find Github Pages title. Select the master branch as the source and save, and you'll then see the URL where the live website is. 
 
 <img src="images/2step12GitFlow.png" width="250" height="auto" alt="repo visual after step 1">
 
 
 <!-- ***********************************************************-->
-## Step 13 - Programmer 2 switches to `master` branch, pulls the remote `master` branch, tries to merge it into `update-class-heading` branch and :collision: resolves merge conflicts :collision:
+## Step 13 - Programmer B switches to `master` branch, pulls the remote `master` branch, tries to merge it into `update-class-heading` branch and :collision: resolves merge conflicts :collision:
 
-1. Programmer 2 switches to `master` branch.
+1. Programmer B switches to `master` branch.
 
   ```sh
   $ git checkout master
   ```
 
-2. Programmer 2 [pulls](https://git-scm.com/docs/git-pull) the remote `master` branch to make sure that the latest version of the project is available locally.
+2. Programmer B [pulls](https://git-scm.com/docs/git-pull) the remote `master` branch to make sure that the latest version of the project is available locally.
 
   ```sh
   $ git pull origin master
@@ -423,13 +396,13 @@ Programmer 2 [reviews the pull request](https://help.github.com/articles/about-p
 
   <img src="images/2step13(1)GitFlow.png" width="400" height="auto" alt="repo visual after step 1">
 
-3. Programmer 2 switches back to the `update-class-heading` branch.
+3. Programmer B switches back to the `update-class-heading` branch.
 
   ```sh
   $ git checkout update-class-heading
   ```
 
-4. Programmer 2 tries to merge `master` branch into `update-class-heading` branch.
+4. Programmer B tries to merge `master` branch into `update-class-heading` branch.
 
   ```sh
   $ git merge master
@@ -449,7 +422,7 @@ Programmer 2 [reviews the pull request](https://help.github.com/articles/about-p
   </body>
   ```
 
-6. Programmer 2 removes HEAD and master markers and leaves only one line with `<h1>` heading so that both issues are addressed.
+6. Programmer B removes HEAD and master markers and leaves only one line with `<h1>` heading so that both issues are addressed.
 
   ```html
   <body>
@@ -459,7 +432,7 @@ Programmer 2 [reviews the pull request](https://help.github.com/articles/about-p
   </body>
   ```
 
-7. Programmer 2 adds the `index.html` file to staging area and commits the changes occurred during the merge conflict.
+7. Programmer B adds the `index.html` file to staging area and commits the changes occurred during the merge conflict.
 
   ```sh
   # First add to staging area
@@ -473,9 +446,9 @@ Programmer 2 [reviews the pull request](https://help.github.com/articles/about-p
 <img src="images/2step13(2)GitFlow.png" width="250" height="auto" alt="repo visual after step 1">
 
 <!-- ***********************************************************-->
-## Step 14 - Programmer 2 pushes `update-class-heading` branch to remote
+## Step 14 - Programmer B pushes `update-class-heading` branch to remote
 
-1. Programmer 2 [pushes](https://help.github.com/articles/pushing-to-a-remote/) `update-class-heading` branch to remote.
+1. Programmer B [pushes](https://help.github.com/articles/pushing-to-a-remote/) `update-class-heading` branch to remote.
 
   ```sh
     $ git push origin update-class-heading
@@ -485,20 +458,20 @@ Programmer 2 [reviews the pull request](https://help.github.com/articles/about-p
 
 
 <!-- ***********************************************************-->
-## Step 15 - Programmer 2 creates a pull request
+## Step 15 - Programmer B creates a pull request
 
 1. Programmer 2 navigates to the repository on GitHub.com and creates a [pull request](https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request) selecting `master` as a base branch and `update-class-heading` as a head branch. Please add a descriptive title (e.g. `Update class name in page heading`) and leave a comment linking the pull request with the issue `#<number>`. Please also select Programmer 1 as an [assignee](https://help.github.com/articles/assigning-issues-and-pull-requests-to-other-github-users/).
 
 
 
 <!-- ***********************************************************-->
-## Step 16 - Programmer 1 merges the pull request :+1:
+## Step 16 - Programmer A merges the pull request :+1:
 
 1. Programmer 1 reviews and [merges the pull request](https://help.github.com/articles/merging-a-pull-request/#merging-a-pull-request-on-github) on GitHub.com.
 
 <img src="images/2step16GitFlow.png" width="250" height="auto" alt="repo visual after step 1">
 
-2. Programmer 1 opens the live website on GitHub pages to double check the new heading style.
+2. Programmer A opens the live website on GitHub pages to double check the new heading style.
 
   <img src="images/heading-after.png" width="500" height="auto" alt="git workflow workshop heading with css style">
 
