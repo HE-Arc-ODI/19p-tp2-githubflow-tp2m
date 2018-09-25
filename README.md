@@ -1,6 +1,9 @@
 **Author**: [@PiotrBerebecki](https://github.com/PiotrBerebecki)  
 **Maintainer**: [@PiotrBerebecki](https://github.com/PiotrBerebecki)
 
+**Adapted for the ODI class at HEG Arc**: [@urosselet](https://github.com/urosselet)
+
+
 # Git Workflow Workshop for Two Programmers 💻 💻
 
 
@@ -29,9 +32,9 @@ An exercise to practice git workflow skills. The workshop should be undertaken b
 
 You're working in a team of two on a project for a new client.
 
-## Step 1 - Create a new GitHub repo and clone it
+## Step 1 - Accept the github classroom assignment and clone the resulting repo
 
-1. Go to your cohort's GitHub organisation and create a new repo, initialising it with a `README.md`.
+1. The first student to accept the assignment creates a team. The second one joins the team. Please use a combination of your first names (for example "alice_bob") for the team name.
 
 2. [Clone](https://help.github.com/articles/cloning-a-repository/) this new repository using your terminal.
 
@@ -43,24 +46,22 @@ You're working in a team of two on a project for a new client.
 
 3. Move into the newly created directory.
 
-  ```sh
-  $ cd git-workflow-workshop-for-two
-  ```
+
 This is what your remote and local repositories look like after this. HEAD is a reference to your current location.</br>
 <img src="images/step1GitFlow.png" width="350" height="auto" alt="repo visual after step 1">
 
   <!-- ***********************************************************-->
-## Step 2 - Raise your issues on the work to be done
+   ## Step 2 - Raise your issues on the work to be done
 
 Normally, you would decide on which "features" you were going to build and then break these down into smaller issues before starting the work.
 
-For the sake of this exercise, we're just going to [add one issue](https://help.github.com/articles/creating-an-issue/) at the moment. Your client wants a beautifully styled heading for the homepage. It should be simple, bold, black writing with a background shadow that makes it stand out.
+For the sake of this exercise, we're just going to [add two issues](https://help.github.com/articles/creating-an-issue/) at the moment. Your client wants a beautifully styled heading for the homepage. It should be simple, bold, black writing with a background shadow that makes it stand out.
 
-1. Raise a new issue with a descriptive title.
-
-2. In the body of the issue, provide more detail about how to complete the work.
-
-3. Assign yourselves to this issue.
+| Programmer A | Programmer B |
+|--|--|
+|1. Raise a new issue corresponding to the creation of the **html homepage**.|1. Raise a new issue corresponding to the creation of the **css stylesheet**.|
+|2. In the body of the issue, provide more detail about how to complete the work: i.e. create an html file called "index.html". | 2. In the body of the issue, provide more detail about how to complete the work: i.e. create a css file called "style.css". |
+|3. Assign yourself to this issue.|3. Assign yourself to this issue.|
 
 
 
@@ -70,23 +71,26 @@ For the sake of this exercise, we're just going to [add one issue](https://help.
 
 There are many types of workflow. At FAC, we use [the GitHub flow](https://guides.github.com/introduction/flow/), where the `master` [branch](](https://help.github.com/articles/about-branches/)) is always deployable. In this flow, each branch is used for a separate feature.
 
-1. Create a branch with a unique and descriptive name. For example, `create-heading-with-shadow`.
+| Programmer A | Programmer B |
+|--|--|
+|1. Create a branch with a unique and descriptive name. For example, `create-homepage`.|1. Create a branch with a unique and descriptive name. For example, `create-stylesheet`.|
+| <pre>$ git branch create-homepage</pre>| <pre>$ git branch create-stylesheet</pre>| 
 
-```sh
-$ git branch create-heading-with-shadow
-```
+
 </br>
 <img src="images/step3(1)GitFlow.png" width="300" height="auto" alt="repo visual after step 1">
+
 2. Leave the master branch by switching to the new branch you have just created.
 
-```sh
-$ git checkout create-heading-with-shadow
-```
+| Programmer A | Programmer B |
+|--|--|
+| <pre> $ git checkout create-homepage </pre>| <pre> $ git checkout create-stylesheet </pre>|
+
 </br>
 <img src="images/step3(2)GitFlow.png" width="300" height="auto" alt="repo visual after step 1">
 
 <!-- ***********************************************************-->
-## Step 4 - Write enough HTML & CSS to satisfy the requirements
+## Step 4a - Programmer A : Write enough HTML to satisfy the requirements
 
 1. Add the following code into a file called `index.html`.
     ```html
@@ -109,7 +113,10 @@ $ git checkout create-heading-with-shadow
     </html>
     ```
 
-2. Create a new file called `style.css` which contains:
+## Step 4b - Programmer B : Write enough CSS to satisfy the requirements
+
+
+1. Create a new file called `style.css` which contains:
     ```css
     * {
       margin: 0;
@@ -135,12 +142,11 @@ $ git checkout create-heading-with-shadow
 <!-- ***********************************************************-->
 ## Step 5 - Add the new files to the staging area
 
-1. Add `index.html` and `style.css` to the [staging area](http://softwareengineering.stackexchange.com/questions/119782/what-does-stage-mean-in-git).
-
-  ```sh
-  $ git add index.html style.css
-  ```
-<img src="images/step5GitFlow.png" width="400" height="auto" alt="repo visual after step 1">
+| Programmer A | Programmer B |
+|--|--|
+|1. Add `index.html` to the [staging area](http://softwareengineering.stackexchange.com/questions/119782/what-does-stage-mean-in-git).|1. Add `style.css` to the [staging area](http://softwareengineering.stackexchange.com/questions/119782/what-does-stage-mean-in-git).|
+|<pre>  $ git add index.html </pre>|<pre>  $ git add style.css</pre>|
+|<img src="images/step5GitFlowA.png" width="400" height="auto" alt="repo visual after step 1"> |<img src="images/step5GitFlowB.png" width="400" height="auto" alt="repo visual after step 1">|
 
 <!-- ***********************************************************-->
 ## Step 6 - Commit your changes
