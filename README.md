@@ -222,7 +222,7 @@ When you apply the two changes above the heading will look like this:
 <img src="images/heading-after.png" width="500" height="auto" alt="git workflow workshop heading with css style">
 
 
-You decide that one of you **(Programmer A) will resolve issue number 1** while the other person **(Programmer B) will resolve issue number 2**. When you begin working on your weekly projects, you will always be pairing. So programmer A represents "pair 1" and programmer B represents "pair 2".
+You decide that one of you **(Programmer A) will resolve the first issue** while the other person **(Programmer B) will resolve the second issue**. When you begin working on your weekly projects, you will always be pairing. So programmer A represents "pair 1" and programmer B represents "pair 2".
 
 **Note: Only one line in the `index.html` file needs to be modified.**
 
@@ -242,12 +242,9 @@ You decide that one of you **(Programmer A) will resolve issue number 1** while 
 <!-- ***********************************************************-->
 ## Step 2 - Raise these 2 new issues
 
-1. Create the following two issues and assign each one to a different person
-
-    + `Fix spelling typo in <h1> heading` (Programmer A)
-
-    + `Correct the class name of <h1> heading to match the existing class name in the css file` (Programmer B)
-
+| Programmer A | Programmer B |
+|--|--|
+|Create issue `Correct the class name of <h1> heading to match the existing class name in the css file` and assign it to Programmer B|Create issue `Fix spelling typo in <h1> heading` and assign it to Programmer A|
 
 <!-- ***********************************************************-->
 ## Step 3 - Both programmers create one branch each and switch to them
@@ -258,8 +255,7 @@ You decide that one of you **(Programmer A) will resolve issue number 1** while 
 |Leave the master branch by switching to the new branch :<br><pre>$ git checkout fix-typo-heading</pre>|Leave the master branch by switching to the new branch :<br><pre>$ git checkout update-class-heading</pre>
 
 Note: You can achieve both steps _at once_ with `git checkout -b <new-branch-name>`.<br>
-**MODIFY IMAGE**
-<img src="images/2step3GitFlow.png" width="400" height="auto" alt="repo visual after step 1">
+<img src="images/2step3GitFlow.png" width="500" height="auto" alt="repo visual after step 1">
 
 <!-- ***********************************************************-->
 ## Step 4 - Both programmers open their `index.html` files and make one requested change each
@@ -289,9 +285,6 @@ Note: You can achieve both steps _at once_ with `git checkout -b <new-branch-nam
   ```sh
   $ git add index.html
   ```
-
-
-
 <!-- ***********************************************************-->
 ## Step 7 - Both programmers commit their changes
 1. Both programmers commit the changes. Don't forget the multi-line commit message with the referenced issue.
@@ -300,14 +293,13 @@ Note: You can achieve both steps _at once_ with `git checkout -b <new-branch-nam
 |--|--|
 |<pre>$ git commit -m 'Fix typo in page heading<br>> Relates #[issue number]'</pre>|<pre>$ git commit -m 'Update class name in heading<br>> Relates #[issue number]'</pre>|
 
-**MODIFY IMAGE**
-<img src="images/2step7GitFlow.png" width="400" height="auto" alt="repo visual after step 1">
+<img src="images/2step7GitFlow.png" width="500" height="auto" alt="repo visual after step 1">
 
 <!-- ***********************************************************-->
-## Step 8 - Programmer 1 switches to `master` branch and pulls down the remote `master` branch
+## Step 8 - Programmer A switches to `master` branch and pulls down the remote `master` branch
 We have so many programmers working on this project now, who knows what changes may have happened to the `master` branch since the last time we looked at the remote version that's on GitHub?
 
-1. Programmer 1 switches to `master` branch.
+1. Programmer A switches to `master` branch.
 
   ```sh
   $ git checkout master
@@ -364,8 +356,6 @@ Programmer B [reviews the pull request](https://help.github.com/articles/about-p
     + "Comment"
     + "Approve"
     + "Request changes"
-
-
 
 <!-- ***********************************************************-->
 ## Step 12 - Programmer B merges the pull request :+1:
