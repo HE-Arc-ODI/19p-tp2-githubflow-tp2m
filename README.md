@@ -1,7 +1,7 @@
 **Author**: [@PiotrBerebecki](https://github.com/PiotrBerebecki)  
 **Maintainer**: [@PiotrBerebecki](https://github.com/PiotrBerebecki)
 
-**Adapted for the ODI class at HEG Arc**: [@urosselet](https://github.com/urosselet)
+**Adapted for the ODI class at HEG Arc**: [@urosselet](https://github.com/urosselet) and @dylanmontandon
 
 
 # Git Workflow Workshop for Two Programmers 💻 💻
@@ -45,9 +45,12 @@ You're working in a team of two on a project for a new client.
   ```
 
 3. Move into the newly created directory.
+``` sh
+$ cd [yourDirectory]
+```
 
 
-This is what your remote and local repositories look like after this. HEAD is a reference to your current location.</br>
+This is what your remote and local repositories look like after this. HEAD is a reference to your current location.<br>
 <img src="images/step1GitFlow.png" width="350" height="auto" alt="repo visual after step 1">
 
   <!-- ***********************************************************-->
@@ -77,7 +80,7 @@ There are many types of workflow. In the ODI class, we use [the GitHub flow](htt
 | <pre>$ git branch create-homepage</pre>| <pre>$ git branch create-stylesheet</pre>| 
 
 
-</br>
+<br>
 <img src="images/step3(1)GitFlow.png" width="300" height="auto" alt="repo visual after step 1">
 
 2. Leave the master branch by switching to the new branch you have just created.
@@ -86,7 +89,7 @@ There are many types of workflow. In the ODI class, we use [the GitHub flow](htt
 |--|--|
 | <pre> $ git checkout create-homepage </pre>| <pre> $ git checkout create-stylesheet </pre>|
 
-</br>
+<br>
 <img src="images/step3(2)GitFlow.png" width="300" height="auto" alt="repo visual after step 1">
 
 <!-- ***********************************************************-->
