@@ -367,7 +367,7 @@ Programmer B [reviews the pull request](https://help.github.com/articles/about-p
 
   <img src="images/pull-request-tab.png" width="500" height="auto" alt="pull request tab button">
 
-2. Programmer B opens the live website on GitHub pages to double check that the spelling mistake has been corrected. Go to the repository settings on Github and scroll down until you find Github Pages title. Select the master branch as the source and save, and you'll then see the URL where the live website is. 
+2. Programmer B opens the website. Just go to the folder where the index.html file is and open it with your favorite web browser.
 
 <img src="images/2step12GitFlow.png" width="250" height="auto" alt="repo visual after step 1">
 
@@ -464,7 +464,7 @@ Programmer B [reviews the pull request](https://help.github.com/articles/about-p
 
 <img src="images/2step16GitFlow.png" width="350" height="auto" alt="repo visual after step 1">
 
-2. Programmer A opens the live website on GitHub pages to double check the new heading style.
+2. Programmer A opens the index.html file to double check the new heading style.
 
   <img src="images/heading-after.png" width="500" height="auto" alt="git workflow workshop heading with css style">
 
