@@ -200,7 +200,7 @@ You should never merge your own pull requests. A PR gives the rest of your team 
 
 After the two pull requests, the result will be the following:
 
-<img src="images/step9GitFlowFinal.png" width="500" height="auto" alt="repo visual after step 1">
+<img src="images/step9GitFlowFinal.png" width="400" height="auto" alt="repo visual after step 1">
 
 
 
@@ -293,7 +293,7 @@ Note: You can achieve both steps _at once_ with `git checkout -b <new-branch-nam
 |--|--|
 |<pre>$ git commit -m 'Fix typo in page heading<br>> Relates #[issue number]'</pre>|<pre>$ git commit -m 'Update class name in heading<br>> Relates #[issue number]'</pre>|
 
-<img src="images/2step7GitFlow.png" width="500" height="auto" alt="repo visual after step 1">
+<img src="images/2step7GitFlow.png" width="600" height="auto" alt="repo visual after step 1">
 
 <!-- ***********************************************************-->
 ## Step 8 - Programmer A switches to `master` branch and pulls down the remote `master` branch
@@ -328,7 +328,7 @@ We have so many programmers working on this project now, who knows what changes 
   $ git push origin fix-typo-heading
   ```
 
-<img src="images/2step9GitFlow.png" width="400" height="auto" alt="repo visual after step 1">
+<img src="images/2step9GitFlow.png" width="500" height="auto" alt="repo visual after step 1">
 
 <!-- ***********************************************************-->
 ## Step 10 - Programmer A creates a pull request
@@ -384,7 +384,7 @@ Programmer B [reviews the pull request](https://help.github.com/articles/about-p
   $ git pull origin master
   ```
 
-  <img src="images/2step13(1)GitFlow.png" width="400" height="auto" alt="repo visual after step 1">
+  <img src="images/2step13(1)GitFlow.png" width="600" height="auto" alt="repo visual after step 1">
 
 3. Programmer B switches back to the `update-class-heading` branch.
 
@@ -433,7 +433,7 @@ Programmer B [reviews the pull request](https://help.github.com/articles/about-p
   > Relates #<issue number> and #<issue number>'
   ```
 
-<img src="images/2step13(2)GitFlow.png" width="250" height="auto" alt="repo visual after step 1">
+<img src="images/2step13(2)GitFlow.png" width="400" height="auto" alt="repo visual after step 1">
 
 <!-- ***********************************************************-->
 ## Step 14 - Programmer B pushes `update-class-heading` branch to remote
@@ -444,22 +444,22 @@ Programmer B [reviews the pull request](https://help.github.com/articles/about-p
     $ git push origin update-class-heading
   ```
 
-<img src="images/2step14GitFlow.png" width="250" height="auto" alt="repo visual after step 1">
+<img src="images/2step14GitFlow.png" width="400" height="auto" alt="repo visual after step 1">
 
 
 <!-- ***********************************************************-->
 ## Step 15 - Programmer B creates a pull request
 
-1. Programmer 2 navigates to the repository on GitHub.com and creates a [pull request](https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request) selecting `master` as a base branch and `update-class-heading` as a head branch. Please add a descriptive title (e.g. `Update class name in page heading`) and leave a comment linking the pull request with the issue `#<number>`. Please also select Programmer 1 as an [assignee](https://help.github.com/articles/assigning-issues-and-pull-requests-to-other-github-users/).
+1. Programmer B navigates to the repository on GitHub.com and creates a [pull request](https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request) selecting `master` as a base branch and `update-class-heading` as a head branch. Please add a descriptive title (e.g. `Update class name in page heading`) and leave a comment linking the pull request with the issue `#<number>`. Please also select Programmer A as an [assignee](https://help.github.com/articles/assigning-issues-and-pull-requests-to-other-github-users/).
 
 
 
 <!-- ***********************************************************-->
 ## Step 16 - Programmer A merges the pull request :+1:
 
-1. Programmer 1 reviews and [merges the pull request](https://help.github.com/articles/merging-a-pull-request/#merging-a-pull-request-on-github) on GitHub.com.
+1. Programmer A reviews and [merges the pull request](https://help.github.com/articles/merging-a-pull-request/#merging-a-pull-request-on-github) on GitHub.com.
 
-<img src="images/2step16GitFlow.png" width="250" height="auto" alt="repo visual after step 1">
+<img src="images/2step16GitFlow.png" width="350" height="auto" alt="repo visual after step 1">
 
 2. Programmer A opens the live website on GitHub pages to double check the new heading style.
 
