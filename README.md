@@ -69,7 +69,7 @@ For the sake of this exercise, we're just going to [add two issues](https://help
 <!-- ***********************************************************-->
 ## Step 3 - Create and move to a new branch
 
-There are many types of workflow. At FAC, we use [the GitHub flow](https://guides.github.com/introduction/flow/), where the `master` [branch](](https://help.github.com/articles/about-branches/)) is always deployable. In this flow, each branch is used for a separate feature.
+There are many types of workflow. In the ODI class, we use [the GitHub flow](https://guides.github.com/introduction/flow/), where the `master` [branch](](https://help.github.com/articles/about-branches/)) is always deployable. In this flow, each branch is used for a separate feature.
 
 | Programmer A | Programmer B |
 |--|--|
@@ -262,7 +262,7 @@ Note: You can achieve both steps _at once_ with `git checkout -b <new-branch-nam
 
 | Programmer A | Programmer B |
 |--|--|
-|**Fix only the spelling typo** in the heading (WORKSHOW -> WORKSHOP). Please do not update the class name. This is dealt with by Programmer B :<br>```<h1 class="some-heading">GIT WORKFLOW WORKSHOP</h1>```|**update only the class name** of the heading (`class="some-heading"` -> `class="page-heading"`). Please do not fix the spelling mistake. This is dealt with by Programmer A:<br>```<h1 class="page-heading">GIT WORKFLOW WORKSHOW</h1>```|
+|**Fix only the spelling typo** in the heading (WORKSHOW -> WORKSHOP). Please do not update the class name, this is dealt with by Programmer B. <br>```<h1 class="some-heading">GIT WORKFLOW WORKSHOP</h1>```|**update only the class name** of the heading (`class="some-heading"` -> `class="page-heading"`). Please do not fix the spelling mistake, this is dealt with by Programmer A.<br>```<h1 class="page-heading">GIT WORKFLOW WORKSHOW</h1>```|
 
 <!-- ***********************************************************-->
 ## Step 5 - Both programmers save their `index.html` files and check status
@@ -471,8 +471,3 @@ Programmer B [reviews the pull request](https://help.github.com/articles/about-p
 ## That's it 😄 Thank you for checking out the 'Git Workflow Workshop for Two Programmers' :clap:  
 
 ***A summary of the above commands and what they do can be found [here](/images/git-flow-summary-table.png) in a neat little table.***
-
-
-**Note**: This workshop introduces you to the idea of forking a repository. This is very useful when wanting to contribute to existing open source projects 💯
-
-However, forking is not required when starting a new repository under `foundersandcoders` or `FAC-X` organisations. All your fellow students will be automatically added as contributors.
